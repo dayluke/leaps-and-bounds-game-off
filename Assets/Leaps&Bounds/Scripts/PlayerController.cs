@@ -35,14 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayers);
-        foreach (Collider2D coll in colliders)
-        {
-            if (coll.gameObject != gameObject)
-            {
-                isGrounded = true;
-            }
-        }
+        CheckIfGrounded();
 
         Move();
     }
@@ -58,6 +51,21 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             jumpPressed = false;
             rb.AddForce(new Vector2(0f, jumpForce));
+        }
+    }
+
+    private void CheckIfGrounded()
+    {
+        if (!isGrounded)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayers);
+            foreach (Collider2D coll in colliders)
+            {
+                if (coll.gameObject != gameObject)
+                {
+                    isGrounded = true;
+                }
+            }
         }
     }
 }

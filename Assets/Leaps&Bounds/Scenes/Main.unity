@@ -412,7 +412,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3
+  m_GravityScale: 25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
-  jumpForce: 1250
+  jumpForce: 10000
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -619,12 +619,12 @@ PrefabInstance:
     - target: {fileID: 5590842067436277226, guid: 0428839e48e468b488aeb3bfd084878c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 5590842067436277226, guid: 0428839e48e468b488aeb3bfd084878c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5590842067436277226, guid: 0428839e48e468b488aeb3bfd084878c,
         type: 3}
